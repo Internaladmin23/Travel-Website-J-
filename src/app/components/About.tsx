@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaPlane, FaMapMarkedAlt, FaUsers } from "react-icons/fa";
+import { FaBus, FaClock, FaHandshake } from "react-icons/fa";
 
 export default function AboutUs() {
   return (
@@ -17,9 +17,7 @@ export default function AboutUs() {
         >
           <h2 className="text-4xl font-bold mb-6">Who We Are</h2>
           <p className="text-lg text-gray-600 mb-6">
-            WanderWays is your trusted travel partner offering curated journeys
-            across the globe. With expert trip planning, customer-first service, and a
-            passion for adventure, we turn travel dreams into reality — stress-free.
+            At <strong>Eco Venture</strong>, we provide dependable and professional employee transportation solutions to leading corporates across Bengaluru. With over 20 years of combined industry experience, we’re redefining corporate mobility with safety, punctuality, and service excellence at our core.
           </p>
 
           <div className="space-y-4">
@@ -44,8 +42,8 @@ export default function AboutUs() {
           className="w-full h-[400px] relative rounded-xl overflow-hidden shadow-md"
         >
           <Image
-            src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
-            alt="Travel experience"
+            src="https://images.unsplash.com/photo-1603787081203-6e208c1a420d?auto=format&fit=crop&w=1470&q=80"
+            alt="Corporate transportation"
             fill
             className="object-cover"
           />
@@ -57,18 +55,18 @@ export default function AboutUs() {
 
 const features = [
   {
-    title: "Worldwide Trips",
-    description: "Explore more than 150 destinations worldwide with tailored experiences.",
-    icon: <FaPlane />,
+    title: "Modern & Versatile Fleet",
+    description: "From sedans to buses, our vehicles are equipped for all corporate travel needs.",
+    icon: <FaBus />,
   },
   {
-    title: "Expert Guides",
-    description: "Our team of experienced guides ensures every journey is memorable and safe.",
-    icon: <FaMapMarkedAlt />,
+    title: "On-Time Every Time",
+    description: "We pride ourselves on punctuality, ensuring smooth employee pickups and drop-offs.",
+    icon: <FaClock />,
   },
   {
-    title: "Trusted by Thousands",
-    description: "Join a growing community of happy travelers from around the world.",
-    icon: <FaUsers />,
+    title: "Trusted by Corporates",
+    description: "We serve major businesses across Bengaluru with safe and reliable mobility solutions.",
+    icon: <FaHandshake />,
   },
 ];

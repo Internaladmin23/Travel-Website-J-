@@ -1,15 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGlobeAsia, FaMapMarkedAlt, FaHeadset } from "react-icons/fa";
+import { FaBusAlt, FaClock, FaHandsHelping } from "react-icons/fa";
 
 export default function WhyChooseUs() {
   return (
     <section className="py-16 px-6 bg-gray-50 text-gray-800">
       <div className="max-w-6xl mx-auto text-center mb-10">
-        <h2 className="text-4xl font-bold mb-4">Why Choose Us</h2>
+        <h2 className="text-4xl font-bold mb-4">Why Choose Eco Venture</h2>
         <p className="text-gray-600 text-lg">
-          We’re not just another travel site — we bring personalized experiences to your fingertips.
+          Corporate employee transportation backed by trust, punctuality, and a modern fleet.
         </p>
       </div>
 
@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
             viewport={{ once: true }}
             className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition"
           >
-            <div className="text-blue-500 text-4xl mb-4 mx-auto">{card.icon}</div>
+            <div className="text-blue-600 text-4xl mb-4 mx-auto">{card.icon}</div>
             <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
             <p className="text-gray-600">{card.description}</p>
           </motion.div>
@@ -35,18 +35,21 @@ export default function WhyChooseUs() {
 
 const cards = [
   {
-    title: "Global Destinations",
-    description: "Explore 100+ countries with hand-picked recommendations and guides.",
-    icon: <FaGlobeAsia />,
+    title: "Reliable Fleet Service",
+    description:
+      "From sedans to buses, we operate a wide range of vehicles to suit all corporate travel needs.",
+    icon: <FaBusAlt />,
   },
   {
-    title: "Tailored Itineraries",
-    description: "Trips crafted by experts to fit your budget and dream destinations.",
-    icon: <FaMapMarkedAlt />,
+    title: "Timely & Safe Commutes",
+    description:
+      "Our operations prioritize punctuality and driver professionalism to ensure hassle-free employee transport.",
+    icon: <FaClock />,
   },
   {
-    title: "24/7 Support",
-    description: "Our dedicated team is always available to help you travel worry-free.",
-    icon: <FaHeadset />,
+    title: "Client-Centric Support",
+    description:
+      "Our support team works closely with corporates to tailor transport solutions that work at scale.",
+    icon: <FaHandsHelping />,
   },
 ];
