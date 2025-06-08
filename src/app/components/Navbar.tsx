@@ -26,7 +26,7 @@ export default function Navbar() {
           onClick={closeMenu}
           className="text-3xl font-bold text-yellow-400"
         >
-          WanderWays
+          Eco Venture
         </Link>
 
         {/* Desktop Menu */}
