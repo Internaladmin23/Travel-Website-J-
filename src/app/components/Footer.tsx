@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8 mt-20">
+    <footer className="bg-gray-900 text-white py-8 ">
       <div className="max-w-7xl mx-auto px-6 text-center md:text-left grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-xl font-bold mb-4">WanderWays</h3>
@@ -34,8 +34,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="mt-8 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} WanderWays. All rights reserved.
+        © {new Date().getFullYear()} WanderWays. All rights reserved. 
       </div>
+      <p className="justify-center align-middle flex pt-4">Made with 💖 from Grudhra Solutions</p>
     </footer>
   );
 }

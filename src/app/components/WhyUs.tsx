@@ -5,10 +5,10 @@ import { FaBusAlt, FaClock, FaHandsHelping } from "react-icons/fa";
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 px-6 bg-gray-50 text-gray-800">
+    <section className=" px-6 bg-gradient-to-r from-blue-200 via-gray-300 to-gray-300 text-gray-800 py-16">
       <div className="max-w-6xl mx-auto text-center mb-10">
-        <h2 className="text-4xl font-bold mb-4">Why Choose Eco Venture</h2>
-        <p className="text-gray-600 text-lg">
+        <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-gray-700 to-yellow-700 bg-clip-text text-transparent ">Why Choose Eco Venture</h2>
+        <p className="text-gray-700 text-lg">
           Corporate employee transportation backed by trust, punctuality, and a modern fleet.
         </p>
       </div>
@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition"
+            className="bg-white p-8 rounded-xl shadow-4xl text-center hover:shadow-xl transition  "
           >
             <div className="text-blue-600 text-4xl mb-4 mx-auto">{card.icon}</div>
             <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
