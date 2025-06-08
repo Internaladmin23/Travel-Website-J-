@@ -19,7 +19,7 @@ export default function AboutPage() {
             About Eco Venture
           </h1>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            Eco Venture isn't just another cab service. We deliver 360° employee
+            Eco Venture isn&#39;t just another cab service. We deliver 360° employee
             transportation solutions for corporates across Bengaluru — with
             experience spanning over 20 years in logistics, fleet operations,
             and business-class commuting.

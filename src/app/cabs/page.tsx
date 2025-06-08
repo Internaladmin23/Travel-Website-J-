@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaUsers, FaStar, FaRupeeSign } from "react-icons/fa";
+import { FaUsers, FaStar } from "react-icons/fa";
 
 const cabs = [
   {

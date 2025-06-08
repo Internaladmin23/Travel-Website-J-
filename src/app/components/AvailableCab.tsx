@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaUsers, FaStar, FaRupeeSign } from "react-icons/fa";
+import { FaUsers, FaStar } from "react-icons/fa";
 
 const cabs = [
   {

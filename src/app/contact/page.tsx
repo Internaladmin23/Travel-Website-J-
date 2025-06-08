@@ -27,7 +27,7 @@ export default function ContactPage() {
         <div>
           <h1 className="text-4xl font-extrabold mb-6 text-yellow-600">Contact Eco Venture</h1>
           <p className="text-lg text-gray-700 mb-8">
-            Have a query, business idea, or need a quote? We're always ready to help.
+            Have a query, business idea, or need a quote? We are always ready to help.
           </p>
 
           <div className="space-y-6 text-gray-700">
