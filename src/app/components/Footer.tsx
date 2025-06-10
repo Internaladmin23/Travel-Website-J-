@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { FaInstagram, FaXTwitter, FaYoutube, FaFacebookF } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8 ">
+    <footer className="bg-gray-900 text-white py-8">
       <div className="max-w-7xl mx-auto px-6 text-center md:text-left grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-xl font-bold mb-4">Eco Venture</h3>
@@ -18,7 +19,10 @@ export default function Footer() {
           <ul className="space-y-2">
             {["Home", "About Us", "Tours", "Contact"].map((item) => (
               <li key={item}>
-                <Link href={`#${item.toLowerCase().replace(/\s+/g, "")}`} className="hover:text-blue-400">
+                <Link
+                  href={`#${item.toLowerCase().replace(/\s+/g, "")}`}
+                  className="hover:text-blue-400"
+                >
                   {item}
                 </Link>
               </li>
@@ -33,10 +37,30 @@ export default function Footer() {
           <p>Address: 123 Travel Road, Adventure City</p>
         </div>
       </div>
-      <div className="mt-8 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} Eco Venture. All rights reserved. 
+
+      {/* Social Media Icons */}
+      <div className="flex justify-center gap-6 mt-8 text-xl">
+        <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagram className="hover:text-pink-500 transition duration-300" />
+        </Link>
+        <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <FaXTwitter className="hover:text-blue-400 transition duration-300" />
+        </Link>
+        <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          <FaYoutube className="hover:text-red-500 transition duration-300" />
+        </Link>
+        <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <FaFacebookF className="hover:text-blue-600 transition duration-300" />
+        </Link>
       </div>
-      <p className="justify-center align-middle flex pt-4">Made with 💖 from Grudhra Solutions</p>
+
+      {/* Copyright */}
+      <div className="mt-8 text-center text-gray-500 text-sm">
+        © {new Date().getFullYear()} Eco Venture. All rights reserved.
+      </div>
+      <p className="justify-center align-middle flex pt-4">
+        Made with 💖 from Grudhra Solutions
+      </p>
     </footer>
   );
 }
