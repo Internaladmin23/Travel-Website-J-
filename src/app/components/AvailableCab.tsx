@@ -10,36 +10,34 @@ const cabs = [
     name: "Swift Dzire",
     description: "Compact and comfortable for quick city pickups.",
     image: "/swift.avif",
-    capacity: 4,
-    rating: 4.7,
-    price: 899,
+    
+    
+    
   },
   {
     id: 2,
     name: "Innova Crysta",
     description: "Spacious and premium for family or business trips.",
     image: "/innova.jpeg",
-    capacity: 6,
-    rating: 4.9,
-    price: 1099,
+    
+    
+    
   },
   {
     id: 3,
     name: "Toyota Camry",
     description: "Executive sedan for smooth, premium rides.",
     image: "/camry.webp",
-    capacity: 4,
-    rating: 4.8,
-    price: 1499,
+    
+    
+    
   },
   {
     id: 4,
     name: "BMW / Benz (3/5/6 Series)",
     description: "Luxury class for elite comfort and style.",
     image: "/bmwbenz.jpg",
-    capacity: 4,
-    rating: 4.9,
-    price: 2999,
+   
   },
 ];
 
@@ -72,22 +70,9 @@ export default function AvailableCabs() {
                 </h3>
                 <p className="text-sm text-gray-300 mb-4">{cab.description}</p>
 
-                <div className="flex justify-between text-sm text-gray-200 mb-4">
-                  <div className="flex items-center gap-2">
-                    <FaUsers className="text-yellow-300" />
-                    {cab.capacity} pax
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <FaStar className="text-yellow-300" />
-                    {cab.rating}
-                  </div>
-                </div>
+                
 
-                <div className="text-lg font-semibold text-green-400 mb-4">
-                  ₹{cab.price.toLocaleString()} onwards
-                </div>
-
-                <button className="w-full bg-gray-200 text-black py-2 rounded-xl font-semibold hover:bg-yellow-300 transition">
+                <button className="w-full bg-gray-200 text-black py-2 rounded-xl font-semibold hover:bg-green-500 transition">
                   Book Now
                 </button>
               </div>
@@ -99,7 +84,7 @@ export default function AvailableCabs() {
         <div className="flex justify-center mt-12">
           <Link
             href="/cabs"
-            className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-xl transition"
+            className="bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-xl transition"
           >
             View All Cabs
           </Link>

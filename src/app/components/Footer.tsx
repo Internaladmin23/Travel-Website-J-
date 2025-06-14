@@ -1,23 +1,35 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FaInstagram, FaXTwitter, FaYoutube, FaFacebookF } from "react-icons/fa6";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="max-w-7xl mx-auto px-6 text-center md:text-left grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Logo and Description */}
         <div>
-          <h3 className="text-xl font-bold mb-4">Eco Venture</h3>
+          <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <Image
+              src="/logo.jpeg"
+              alt="Eco Venture Logo"
+              width={40}
+              height={40}
+              className="object-contain rounded"
+            />
+            <h3 className="text-xl font-bold">Eco Venture</h3>
+          </div>
           <p className="text-gray-400">
             Explore the world with us. We offer the best tours and travel experiences.
           </p>
         </div>
 
+        {/* Quick Links */}
         <div>
           <h4 className="font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2">
-            {["Home", "About Us", "Tours", "Contact"].map((item) => (
+            {["Home", "About Us", "Fleet", "Contact"].map((item) => (
               <li key={item}>
                 <Link
                   href={`#${item.toLowerCase().replace(/\s+/g, "")}`}
@@ -30,6 +42,7 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Contact Info */}
         <div>
           <h4 className="font-semibold mb-3">Contact</h4>
           <p>Email: contact@wanderways.com</p>
