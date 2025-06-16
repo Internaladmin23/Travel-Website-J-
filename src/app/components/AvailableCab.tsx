@@ -34,9 +34,9 @@ const cabs = [
   },
   {
     id: 4,
-    name: "BMW / Benz (3/5/6 Series)",
+    name: "BMW ",
     description: "Luxury class for elite comfort and style.",
-    image: "/bmwbenz.jpg",
+    image: "/bmw-3.jpg",
    
   },
 ];
