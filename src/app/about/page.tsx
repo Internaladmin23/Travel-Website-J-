@@ -167,9 +167,9 @@ const cabHighlights = [
     image: "/innova.jpeg",
   },
   {
-    name: "BMW / Benz",
+    name: "Toyota Camry",
     type: "Luxury Sedan | 4-seater",
-    image: "/bmwbenz.jpg",
+    image: "/camry.webp",
   },
   {
     name: "Rolls Royce",

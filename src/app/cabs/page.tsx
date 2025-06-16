@@ -25,31 +25,31 @@ const cabs = [
     id: 4,
     name: "BMW 3 Series",
     description: "Luxury sedan with superior comfort and performance.",
-    image: "/fleet/bmw-3.jpg",
+    image: "/bmw-3.jpg",
   },
   {
     id: 5,
     name: "BMW 5 Series",
     description: "Executive-level luxury with advanced features.",
-    image: "/fleet/bmw-5.jpg",
+    image: "/bmw-5.jpg",
   },
   {
     id: 6,
     name: "Mercedes-Benz E-Class",
     description: "Classy and elegant with top-tier ride quality.",
-    image: "/fleet/benz-e.jpg",
+    image: "/eclass.jpg",
   },
   {
     id: 7,
     name: "Mercedes-Benz S-Class",
     description: "Flagship luxury experience for elite travelers.",
-    image: "/fleet/benz-s.jpg",
+    image: "/sclas.avif",
   },
   {
     id: 8,
     name: "Jaguar XF",
     description: "Iconic British luxury with sporty performance.",
-    image: "/fleet/jaguar.jpg",
+    image: "/xf.avif",
   },
   {
     id: 9,
@@ -67,7 +67,7 @@ const cabs = [
     id: 11,
     name: "Buses (21–53 Seaters)",
     description: "Ideal for corporate & employee group transport.",
-    image: "/fleet/bus.jpg",
+    image: "/bus.avif",
   },
   {
     id: 12,
@@ -89,7 +89,7 @@ export default function CabsPage() {
           {cabs.map((cab) => (
             <div
               key={cab.id}
-              className="bg-gray-900/80 border border-yellow-400/20 rounded-3xl overflow-hidden shadow-lg hover:shadow-black/70 transition duration-300 hover:scale-[1.02] flex flex-col"
+              className="bg-gray-900/90 border border-yellow-400/20 rounded-3xl overflow-hidden shadow-lg hover:shadow-black/70 transition duration-300 hover:scale-[1.02] flex flex-col"
             >
               <div className="relative w-full h-48">
                 <Image
@@ -101,7 +101,7 @@ export default function CabsPage() {
               </div>
 
               <div className="p-5 flex flex-col flex-grow justify-between">
-                <h3 className="text-xl font-bold text-yellow-300 mb-1">
+                <h3 className="text-xl font-bold text-white mb-1">
                   {cab.name}
                 </h3>
                 <p className="text-sm text-gray-300 mb-4">{cab.description}</p>

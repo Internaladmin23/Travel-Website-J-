@@ -65,7 +65,7 @@ export default function AvailableCabs() {
               </div>
 
               <div className="p-5 flex flex-col justify-between">
-                <h3 className="text-xl font-bold text-yellow-300 mb-1">
+                <h3 className="text-xl font-bold text-white mb-1">
                   {cab.name}
                 </h3>
                 <p className="text-sm text-gray-300 mb-4">{cab.description}</p>
