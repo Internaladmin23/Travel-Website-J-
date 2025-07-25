@@ -36,7 +36,7 @@ const cabs = [
     id: 4,
     name: "BMW ",
     description: "Luxury class for elite comfort and style.",
-    image: "/bmw-3.jpg",
+    image: "/bmw-3  .jpg",
    
   },
 ];
@@ -46,7 +46,7 @@ export default function AvailableCabs() {
     <section className="py-20 bg-gray-200 text-gray-900" id="fleet">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-extrabold mb-14 text-center text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-900 to-gray-900">
-          Available Cabs & Destinations
+          Available Cabs 
         </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">

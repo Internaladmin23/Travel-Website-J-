@@ -61,7 +61,7 @@ const cabs = [
     id: 10,
     name: "Tempo Traveller (12+1)",
     description: "Perfect for small groups with AC & LED options.",
-    image: "/fleet/tempo.jpg",
+    image: "/traveler.jpg",
   },
   {
     id: 11,

@@ -29,50 +29,58 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2">
-            {["Home", "About Us", "Fleet", "Contact"].map((item) => (
-              <li key={item}>
-                <Link
-                  href={`#${item.toLowerCase().replace(/\s+/g, "")}`}
-                  className="hover:text-blue-400"
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link href="/" className="hover:text-blue-400">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-blue-400">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/cabs" className="hover:text-blue-400">
+                Fleet
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-blue-400">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
           <h4 className="font-semibold mb-3">Contact</h4>
-          <p>Email: contact@wanderways.com</p>
-          <p>Phone: +1 234 567 890</p>
-          <p>Address: 123 Travel Road, Adventure City</p>
+          <p>Email: ecoventure2025@gmail.com</p>
+          <p>Phone: +91 70221 67815</p>
+          <p>
+            Address: No.110, Kanaka Road, Bharath Nagar,
+            Bengaluru - 560091
+          </p>
+          <p>Technology Partner: Refex Green Mobility Ltd.</p>
         </div>
       </div>
 
-      {/* Social Media Icons */}
-      <div className="flex justify-center gap-6 mt-8 text-xl">
-        <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-          <FaInstagram className="hover:text-pink-500 transition duration-300" />
-        </Link>
-        <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <FaXTwitter className="hover:text-blue-400 transition duration-300" />
-        </Link>
-        <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-          <FaYoutube className="hover:text-red-500 transition duration-300" />
-        </Link>
-        <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <FaFacebookF className="hover:text-blue-600 transition duration-300" />
-        </Link>
-      </div>
+     
 
       {/* Copyright */}
       <div className="mt-8 text-center text-gray-500 text-sm">
         © {new Date().getFullYear()} Eco Venture. All rights reserved.
       </div>
       <p className="justify-center align-middle flex pt-4">
-        Made with 💖 from Grudhra Solutions
+        Made with 💖 from{" "}
+        <Link
+          href="https://grudhrasolutions.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-100 hover:underline ml-1"
+        >
+          Grudhra Solutions
+        </Link>
       </p>
     </footer>
   );
