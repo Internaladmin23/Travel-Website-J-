@@ -109,7 +109,7 @@ export default function ContactPage() {
                   required
                   value={formData[field]}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full border text-black border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
               </div>
             ))}
