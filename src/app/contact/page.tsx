@@ -3,8 +3,22 @@
 import { useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
+type FormDataType = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
+interface ContactDetailProps {
+  icon: React.ReactNode;
+  label: string;
+}
+
+const fields: Array<keyof FormDataType> = ["name", "email", "phone"];
+
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormDataType>({
     name: "",
     email: "",
     phone: "",
@@ -16,7 +30,8 @@ export default function ContactPage() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -57,7 +72,7 @@ export default function ContactPage() {
           </p>
 
           <div className="space-y-6 text-gray-700">
-            <ContactDetail
+          <ContactDetail
               icon={<FaPhone className="text-blue-600 text-xl" />}
               label="+91 70221 67815"
             />
@@ -79,7 +94,7 @@ export default function ContactPage() {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
-            {["name", "email", "phone"].map((field) => (
+            {fields.map((field) => (
               <div key={field}>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   {field === "name"
@@ -92,9 +107,9 @@ export default function ContactPage() {
                   type={field === "email" ? "email" : field === "phone" ? "tel" : "text"}
                   name={field}
                   required
-                  value={(formData as any)[field]}
+                  value={formData[field]}
                   onChange={handleChange}
-                  className="w-full border text-black border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
               </div>
             ))}
@@ -129,7 +144,7 @@ export default function ContactPage() {
   );
 }
 
-function ContactDetail({ icon, label }: { icon: React.ReactNode; label: string }) {
+function ContactDetail({ icon, label }: ContactDetailProps) {
   return (
     <div className="flex items-start gap-4">
       <div>{icon}</div>
