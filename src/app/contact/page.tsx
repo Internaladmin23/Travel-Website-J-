@@ -7,9 +7,11 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "", // Added phone here
+    phone: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -17,10 +19,29 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Message sent! We'll get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", message: "" }); // Reset phone
+    setLoading(true);
+
+    try {
+      const res = await fetch("https://formspree.io/f/mnnzdwno", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert("Message sent! We'll get back to you soon.");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        alert("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -28,7 +49,9 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         {/* Contact Info */}
         <div>
-          <h1 className="text-4xl font-extrabold mb-6 text-yellow-600">Contact Eco Venture</h1>
+          <h1 className="text-4xl font-extrabold mb-6 text-yellow-600">
+            Contact Eco Venture
+          </h1>
           <p className="text-lg text-gray-700 mb-8">
             Have a query, business idea, or need a quote? We are always ready to help.
           </p>
@@ -51,63 +74,53 @@ export default function ContactPage() {
 
         {/* Form */}
         <div className="relative rounded-2xl bg-white/80 backdrop-blur-md border border-gray-200 shadow-2xl p-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Send a Message</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+            Send a Message
+          </h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-              <input
-                type="text"
-                name="name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-              />
-            </div>
+            {["name", "email", "phone"].map((field) => (
+              <div key={field}>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  {field === "name"
+                    ? "Your Name"
+                    : field === "email"
+                    ? "Email Address"
+                    : "Phone Number"}
+                </label>
+                <input
+                  type={field === "email" ? "email" : field === "phone" ? "tel" : "text"}
+                  name={field}
+                  required
+                  value={(formData as any)[field]}
+                  onChange={handleChange}
+                  className="w-full border text-black border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                />
+              </div>
+            ))}
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-              <input
-                type="email"
-                name="email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-              />
-            </div>
-
-            {/* Phone Number Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-              <input
-                type="tel"
-                name="phone"
-                required
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Message
+              </label>
               <textarea
                 name="message"
                 rows={5}
                 required
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full border text-black border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold py-2 px-4 rounded-lg transition"
+              disabled={loading}
+              className={`w-full ${
+                loading ? "bg-yellow-300 cursor-not-allowed" : "bg-yellow-400 hover:bg-yellow-300"
+              } text-gray-900 font-semibold py-2 px-4 rounded-lg transition`}
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>

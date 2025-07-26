@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const cabs = [
   {
@@ -106,9 +107,14 @@ export default function CabsPage() {
                 </h3>
                 <p className="text-sm text-gray-300 mb-4">{cab.description}</p>
 
-                <button className="w-full bg-gray-200 text-black py-2 rounded-xl font-semibold hover:bg-green-500 transition">
-                  Book Now
-                </button>
+                <div className="flex justify-center mt-12">
+          <Link
+            href="/cabs"
+            className="bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-xl transition"
+          >
+            View All Cabs
+          </Link>
+        </div>
               </div>
             </div>
           ))}

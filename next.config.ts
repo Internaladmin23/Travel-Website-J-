@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  env: {
+    BUSINESS_EMAIL: process.env.BUSINESS_EMAIL,
+    BUSINESS_EMAIL_PASS: process.env.BUSINESS_EMAIL_PASS,
+  },
 };
 
 export default nextConfig;
