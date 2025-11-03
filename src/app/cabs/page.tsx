@@ -109,10 +109,10 @@ export default function CabsPage() {
 
                 <div className="flex justify-center mt-12">
           <Link
-            href="/cabs"
+            href="/contact"
             className="bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-xl transition"
           >
-            View All Cabs
+            Book Now
           </Link>
         </div>
               </div>
