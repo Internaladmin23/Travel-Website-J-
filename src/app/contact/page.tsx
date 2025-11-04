@@ -85,7 +85,7 @@ export default function ContactPage() {
           href="mailto:reach@ecoventure.travel"
           className="text-gray-900 hover:underline"
         >
-          ecoventure2025@gmail.com
+          reach@ecoventure.travel
         </a>
       }
     />
