@@ -116,7 +116,7 @@ export default function AboutPage() {
           </h3>
           <ul className="text-gray-700 space-y-2 text-sm">
             <li>
-              <strong>Email:</strong> ecoventure2025@gmail.com
+              <strong>Reach@:</strong> ecoventure2025@gmail.com
             </li>
             <li>
               <strong>Phone:</strong> +91 70221 67815
