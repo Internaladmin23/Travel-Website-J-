@@ -109,7 +109,7 @@ export default function AboutPage() {
           </div>
         </motion.div>
 
-        {/* Contact Info */}
+        
         {/* Contact Info */}
 <div className="bg-white shadow-md p-6 rounded-xl border max-w-xl mx-auto text-center mt-16">
   <h3 className="text-xl font-semibold text-gray-800 mb-4">
@@ -119,10 +119,10 @@ export default function AboutPage() {
     <li>
       <strong>Reach@:</strong>{" "}
       <a
-        href="mailto:ecoventure2025@gmail.com"
+        href="mailto:reach@ecoventure.travel"
         className="text-blue-600 hover:underline"
       >
-        ecoventure2025@gmail.com
+        reach@ecoventure.travel
       </a>
     </li>
     <li>

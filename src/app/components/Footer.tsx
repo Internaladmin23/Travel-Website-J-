@@ -57,10 +57,10 @@ export default function Footer() {
           <p>
             Reach@:{" "}
             <a
-              href="mailto:ecoventure2025@gmail.com"
+              href="mailto:reach@ecoventure.travel"
               className="text-blue-400 hover:underline"
             >
-              ecoventure2025@gmail.com
+              reach@ecoventure.travel
             </a>
           </p>
           <p>Phone: +91 70221 67815</p>

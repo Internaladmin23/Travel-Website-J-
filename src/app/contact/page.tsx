@@ -12,8 +12,9 @@ type FormDataType = {
 
 interface ContactDetailProps {
   icon: React.ReactNode;
-  label: string;
+  label: React.ReactNode; // allows clickable <a> tag
 }
+
 
 const fields: Array<keyof FormDataType> = ["name", "email", "phone"];
 
@@ -81,7 +82,7 @@ export default function ContactPage() {
       icon={<FaEnvelope className="text-blue-600 text-xl" />}
       label={
         <a
-          href="mailto:ecoventure2025@gmail.com"
+          href="mailto:reach@ecoventure.travel"
           className="text-gray-900 hover:underline"
         >
           ecoventure2025@gmail.com
