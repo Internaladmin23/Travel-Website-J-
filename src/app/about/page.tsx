@@ -110,26 +110,34 @@ export default function AboutPage() {
         </motion.div>
 
         {/* Contact Info */}
-        <div className="bg-white shadow-md p-6 rounded-xl border max-w-xl mx-auto text-center mt-16">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">
-            Contact Us
-          </h3>
-          <ul className="text-gray-700 space-y-2 text-sm">
-            <li>
-              <strong>Reach@:</strong> ecoventure2025@gmail.com
-            </li>
-            <li>
-              <strong>Phone:</strong> +91 70221 67815
-            </li>
-            <li>
-              <strong>Address:</strong> No.110, Kanaka Road, Bharath Nagar,
-              Bengaluru - 560091
-            </li>
-            <li>
-              <strong>Technology Partner:</strong> Refex Green Mobility Ltd.
-            </li>
-          </ul>
-        </div>
+        {/* Contact Info */}
+<div className="bg-white shadow-md p-6 rounded-xl border max-w-xl mx-auto text-center mt-16">
+  <h3 className="text-xl font-semibold text-gray-800 mb-4">
+    Contact Us
+  </h3>
+  <ul className="text-gray-700 space-y-2 text-sm">
+    <li>
+      <strong>Reach@:</strong>{" "}
+      <a
+        href="mailto:ecoventure2025@gmail.com"
+        className="text-blue-600 hover:underline"
+      >
+        ecoventure2025@gmail.com
+      </a>
+    </li>
+    <li>
+      <strong>Phone:</strong> +91 70221 67815
+    </li>
+    <li>
+      <strong>Address:</strong> No.110, Kanaka Road, Bharath Nagar,
+      Bengaluru - 560091
+    </li>
+    <li>
+      <strong>Technology Partner:</strong> Refex Green Mobility Ltd.
+    </li>
+  </ul>
+</div>
+
       </div>
     </section>
   );
