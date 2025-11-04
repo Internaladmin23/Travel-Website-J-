@@ -54,7 +54,7 @@ export default function Footer() {
         {/* Contact Info */}
         <div>
           <h4 className="font-semibold mb-3">Contact</h4>
-          <p>Email: ecoventure2025@gmail.com</p>
+          <p>Reach@: ecoventure2025@gmail.com</p>
           <p>Phone: +91 70221 67815</p>
           <p>
             Address: No.110, Kanaka Road, Bharath Nagar,
