@@ -74,7 +74,7 @@ const cabs = [
     id: 12,
     name: "Volvo / Multi-Axle",
     description: "Best for long-distance luxury corporate tours.",
-    image: "/volvo.webp",
+    image: "/volvomultiaxle.jpg",
   },
 ];
 

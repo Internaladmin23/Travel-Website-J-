@@ -26,7 +26,7 @@ const cabs = [
     id: 4,
     name: "BMW ",
     description: "Luxury class for elite comfort and style.",
-    image: "/bmw-3  .jpg",
+    image: "/bmwsuv.jpg",
   },
 ];
 
