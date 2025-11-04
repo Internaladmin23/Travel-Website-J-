@@ -12,8 +12,9 @@ type FormDataType = {
 
 interface ContactDetailProps {
   icon: React.ReactNode;
-  label: string;
+  label: React.ReactNode; // allows clickable <a> tag
 }
+
 
 const fields: Array<keyof FormDataType> = ["name", "email", "phone"];
 
@@ -62,30 +63,39 @@ export default function ContactPage() {
   return (
     <section className="min-h-screen py-24 px-6 bg-gradient-to-br from-blue-50 via-yellow-50 to-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        
         {/* Contact Info */}
-        <div>
-          <h1 className="text-4xl font-extrabold mb-6 text-yellow-600">
-            Contact Eco Venture
-          </h1>
-          <p className="text-lg text-gray-700 mb-8">
-            Have a query, business idea, or need a quote? We are always ready to help.
-          </p>
+<div>
+  <h1 className="text-4xl font-extrabold mb-6 text-yellow-600">
+    Contact Eco Venture
+  </h1>
+  <p className="text-lg text-gray-700 mb-8">
+    Have a query, business idea, or need a quote? We are always ready to help.
+  </p>
 
-          <div className="space-y-6 text-gray-700">
-          <ContactDetail
-              icon={<FaPhone className="text-blue-600 text-xl" />}
-              label="+91 70221 67815"
-            />
-            <ContactDetail
-              icon={<FaEnvelope className="text-blue-600 text-xl" />}
-              label="ecoventure2025@gmail.com"
-            />
-            <ContactDetail
-              icon={<FaMapMarkerAlt className="text-blue-600 text-xl" />}
-              label="No.110, Kanaka Road, Bharath Nagar, Bengaluru - 560091"
-            />
-          </div>
-        </div>
+  <div className="space-y-6 text-gray-700">
+    <ContactDetail
+      icon={<FaPhone className="text-blue-600 text-xl" />}
+      label="+91 70221 67815"
+    />
+    <ContactDetail
+      icon={<FaEnvelope className="text-blue-600 text-xl" />}
+      label={
+        <a
+          href="mailto:reach@ecoventure.travel"
+          className="text-gray-900 hover:underline"
+        >
+          ecoventure2025@gmail.com
+        </a>
+      }
+    />
+    <ContactDetail
+      icon={<FaMapMarkerAlt className="text-blue-600 text-xl" />}
+      label="No.110, Kanaka Road, Bharath Nagar, Bengaluru - 560091"
+    />
+  </div>
+</div>
+
 
         {/* Form */}
         <div className="relative rounded-2xl bg-white/80 backdrop-blur-md border border-gray-200 shadow-2xl p-8">

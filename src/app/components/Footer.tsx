@@ -54,7 +54,15 @@ export default function Footer() {
         {/* Contact Info */}
         <div>
           <h4 className="font-semibold mb-3">Contact</h4>
-          <p>Reach@: ecoventure2025@gmail.com</p>
+          <p>
+            Reach@:{" "}
+            <a
+              href="mailto:reach@ecoventure.travel"
+              className="text-blue-400 hover:underline"
+            >
+              reach@ecoventure.travel
+            </a>
+          </p>
           <p>Phone: +91 70221 67815</p>
           <p>
             Address: No.110, Kanaka Road, Bharath Nagar,
@@ -64,12 +72,11 @@ export default function Footer() {
         </div>
       </div>
 
-     
-
       {/* Copyright */}
       <div className="mt-8 text-center text-gray-500 text-sm">
         © {new Date().getFullYear()} Eco Venture. All rights reserved.
       </div>
+
       <p className="justify-center align-middle flex pt-4">
         Made with 💖 from{" "}
         <Link
